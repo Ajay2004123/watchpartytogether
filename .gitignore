@@ -1,0 +1,19 @@
+# root dependencies
+node_modules
+
+# client dependencies
+client/node_modules
+
+# server dependencies
+server/node_modules
+
+# build files
+client/build
+
+# environment variables
+.env
+server/.env
+client/.env
+
+# logs
+npm-debug.log
