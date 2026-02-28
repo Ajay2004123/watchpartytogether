@@ -11,11 +11,14 @@ export const SocketProvider = ({ children }) => {
 
   useEffect(() => {
     if (!user) return;
-    socketRef.current = io(process.env.REACT_APP_SOCKET_URL || 'http://localhost:5000', {
-      transports: ['websocket'],
-      reconnectionAttempts: 10,
-      reconnectionDelay: 1000,
-    });
+   socketRef.current = io(
+  process.env.REACT_APP_API_URL || 'http://localhost:5000',
+  {
+    transports: ['websocket'],
+    reconnectionAttempts: 10,
+    reconnectionDelay: 1000,
+  }
+);
     socketRef.current.on('connect',    () => setConnected(true));
     socketRef.current.on('disconnect', () => setConnected(false));
     return () => socketRef.current?.disconnect();
