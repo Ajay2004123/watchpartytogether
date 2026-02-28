@@ -12,7 +12,7 @@
  "scripts": {
   "start": "react-scripts start",
   "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build"
-}
+
   },
   "browserslist": {
     "production": [
