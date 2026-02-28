@@ -9,9 +9,10 @@
     "react-scripts": "5.0.1",
     "socket.io-client": "^4.7.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "CI=false react-scripts build"
+ "scripts": {
+  "start": "react-scripts start",
+  "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build"
+}
   },
   "browserslist": {
     "production": [
